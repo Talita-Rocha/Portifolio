@@ -1,0 +1,450 @@
+/* Sobre variáveis ->> https://developer.mozilla.org/pt-BR/docs/Web/CSS/Specificity */
+:root{
+    --primary: #101417;
+    --brand: #B91F33;
+    --gray-light:#E1E1E1;
+    --gray-medium:#666666;
+    --contrast:#E0E34C; 
+}
+
+/* EXTRAÍDO DO GOOGLE FONTS, NA CAIXA À DIREITA (CSS rules to specify families) */
+*{
+    font-family: 'Teko', sans-serif;
+    text-transform: uppercase; /*altera o texto para maiúsculo*/
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{ 
+    margin: 0;
+    background-color: var(--primary);
+}
+
+div{
+    scroll-margin-top: 100px;
+}
+    
+h1, h2, h3, h4, h5, h6{
+    margin: 0;
+}
+
+h2{
+    color: #ffffff;
+    font-size: 40px;
+}
+
+p{
+    color: var(--gray-light);
+    font-size: 18px;   
+    line-height: 120%; 
+}
+
+img, iframe{
+    display: block;
+
+}
+
+/*todos os containers do site*/
+.container{
+    max-width: 1140px;  /*tiramos a largura fixa(width) e aplicamos a largura maxima para ficar com a largura responviva*/
+    margin: 0 auto; 
+    /* "zero" para a vertical (top/bottom) e "auto" para a horizontal (left/right)*/
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.header{
+    padding-top: 16px;
+    padding-bottom: 16px;
+    background-color: var(--primary);
+    width: 100%;
+    position: sticky; /*fixa a div após o scroll*/
+    top: 0;
+    z-index: 100; /* para ordenar o position, quanto maior o número, maior é a prioridade na ordem dos positions */
+}
+
+/*container que está dentro do header*/
+.header .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu a{
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 700; 
+    /*mesmo que BOLD (negrito, mas tem variação) ->> se atentar para a descrição da fonteb obtida no google*/
+    text-decoration: none;
+    margin-left: 110px;
+}
+
+.menu a:hover{
+    color: var(--brand);
+}
+
+.hero-section{
+    height: 550px;
+    background-image: url(../img/background.jpg);
+    background-size: cover;
+    background-position: top center;
+    display: flex;
+    align-items: center;
+    text-align: center;   
+}
+
+.hero-section h1{
+    color: var(--gray-light);
+    font-size: 96px;
+    line-height: 90%;
+}
+
+.hero-section p{
+    font-size: 24px;
+}
+
+.btn{
+    background-color: var(--brand);
+    color: #ffffff;
+    text-decoration: none;
+    padding: 13px 60px 9px 60px; /*top right bottom left*/
+    font-size: 18px;
+    border-radius: 3px;
+    display: inline-block;
+    transition: 0.3s; 
+    border: solid 2px transparent;
+    cursor: pointer;
+}
+
+.btn:hover{
+    transform: scale(1.05);
+    /* background-color: var(--contrast); */
+    /* color: var(--primary); */
+}
+
+.btn-outline{
+    border: solid 2px var(--brand);
+    background-color: transparent;
+}
+
+/* NOSSA ACADEMIA */
+
+.nossa-academia{
+    display: flex;
+    align-items: center;
+    gap: 24px; /*espaço entre as colunas*/
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+/* FACA-PARTE */
+
+.faca-parte{
+    background-color: var(--gray-light);
+}
+
+.content-faca-parte {
+    /* width: 850px; */
+    width: calc(100% - 170px);
+    max-width: 840px;
+    /* 200/185px é ref a imagem do atleta */
+}
+
+.content-faca-parte h2{
+    color: var(--primary);
+}
+
+.content-faca-parte p{
+    color: var(--gray-medium); 
+}
+
+.faca-parte .container {
+    position: relative;
+    padding: 37px 15px; 
+    /*estava 37|0 por conta da responsividade alteramos pra 37|15 
+    para dá uma margem que foi dada lá em cima no container*/
+    /* position para que o container sirva de referência para o position absolute */
+}
+    
+.img-atleta {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    /* 
+    position: fixed; um elemento fixa sobre o outro (fixar o menu, por exemplo)
+    position: absolute; um elemento fica sobre o outro | 
+    em relação ao elemento pai (desde que ele também tenha position)
+    caso contrário , será em relação ao body*/
+}
+
+/* PLANOS */
+
+.planos{
+   text-align: center;
+   margin-top: 100px;
+   margin-bottom: 100px;
+ }
+ 
+ .flex-cards{
+    display: flex;
+    column-gap: 24px;
+ }
+
+ .card{
+    background-color: black;
+    border: 1px solid var(--gray-light);
+    border-radius: 3px;
+    padding: 30px;  
+ }
+
+.card h3{
+    color: #ffffff;
+    font-size: 32px; 
+}
+ 
+ .card ul{
+    color: #ffffff;
+    font-size: 18px;
+    text-align: left;
+    padding: 0;
+    list-style-position: inside;
+ }
+
+ .card span{
+    color: #ffffff;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.card .btn{
+    display: block;
+}
+
+.destaque{
+    border-color: var(--contrast);
+}
+
+.destaque span{
+    color: var(--contrast);
+}
+
+/* CONTATO */
+
+.contato{
+    /* background-color: blue;  */
+    display: flex;
+    column-gap: 24px;
+    margin-bottom: 100px;
+}
+
+.contato input, .contato textarea{
+    width: 100%;
+    height: 40px;
+    background-color: transparent;
+    border: 1px solid var(--gray-light);
+    border-radius: 3px;
+    padding-left: 10px;
+    margin-bottom: 10px;
+    color:#ffffff;
+    font-size: 18px;
+    box-sizing: border-box; 
+    /*este comando faz os ajustes das dimensões automaticamente, faz com que o border e padding não interfiram na soma*/
+}
+
+.contato textarea{
+    height: 140px;
+    resize: none; /*para remover a opção do usuário ajustar o tamanho do campo */
+    padding: 10px;
+}
+
+::placeholder{
+    color: var(--gray-medium);
+}
+/* altera a cor de todos placeholder */
+
+/* FOOTER */
+
+.footer{
+    background-color: var(--brand);
+    padding: 15px 195px;
+    box-sizing: border-box;
+}
+
+.footer p{
+    margin: 0;
+    text-align: center;    
+}
+
+.social{
+    display: flex;
+    justify-content: center;
+    column-gap: 10px; 
+    margin-top: 30px;
+    margin-bottom: 100px;
+}
+
+/* Ver site de resolução de telas (Screen Resolution Stats) menor que 1280px não é desktop */
+
+/* DESIGNE RESPONSIVO */
+
+/* Condição para telas de até 1279px (TABLETS)*/
+
+@media (max-width: 1279px) {
+
+    .menu{
+        display: none;
+        background-color: var(--brand);
+        position: absolute;
+        left: 0;
+        top: 100px;
+        width: 100%;
+        height: 100vh;
+    }
+
+    .menu-open{
+        display: block;
+    }
+
+    .menu a{
+        display: block;
+        margin: 0;
+        padding: 25px 15px;
+        border-bottom: 1px solid var(--primary);
+    }
+
+    .menu a:hover, .menu a:active{
+        background-color: var(--primary);
+    }
+
+    .bar{
+        width: 40px;
+        height: 3px;
+        background-color: #ffffff;
+        margin-bottom: 3px;
+    }
+
+    h2{
+        font-size: 36px;
+    }
+
+    /* HERO-SECTION */
+
+    .hero-section h1{
+        font-size: 66px;
+    }
+
+    .hero-section p{
+        font-size: 20px;
+    }
+
+    /* NOSSA-ACADEMIA */
+
+    .nossa-academia{
+        flex-direction: column;
+    }
+
+    .img-aluno img{
+        width: 100%; /*para a imagem se ajustar a div*/
+    }
+
+    .content-nossa-academia{
+        max-width: 558px;
+    }
+
+    /*FACA-PARTE*/
+
+    /* PLANOS */
+
+    .flex-cards{
+        flex-direction: column;
+        row-gap: 30px;
+    }
+
+    .card h3{
+        font-size: 28px;
+    }
+
+    .card span{
+        font-size: 30px;
+    }
+
+    /* PODEMOS ABREVIAR O CÓDIGO ASSIM:
+    .contato{
+        flex-direction: column;
+        row-gap: 30px;
+    }
+    */
+    /* CONTATO */
+
+    .contato{
+        flex-direction: column;
+        row-gap: 30px;
+    }
+
+    .maps iframe{
+        width: 100%;
+        height: 460px;
+    }
+
+    /* FOOTER */
+
+    .footer{
+        padding: 15px;
+        margin: 0 15px;
+    }
+    
+    /* SOCIAL */
+}
+
+/* Condição para telas de até 767px (SMARTPHONES)*/
+
+@media (max-width: 767px) {
+
+    h2{
+        font-size: 32px;
+    }
+
+    /* HERO-SECTION */
+
+    .hero-section {
+        height: 420px;
+    }
+
+    .hero-section h1{
+        font-size: 36px;
+    }
+
+    .hero-section p{
+        font-size: 20px;
+    }
+
+    /* NOSSA-ACADEMIA */
+
+    /*FACA-PARTE*/
+
+    .content-faca-parte{
+        width: 100%;
+    }
+
+    .img-atleta{
+        display: none;
+    }
+
+    /* PLANOS */
+
+    .card h3{
+        font-size: 24px;
+    }
+
+    .card span{
+        font-size: 28px;
+    }
+
+    /* CONTATO */
+
+    /* FOOTER */
+
+    /* SOCIAL */
+}

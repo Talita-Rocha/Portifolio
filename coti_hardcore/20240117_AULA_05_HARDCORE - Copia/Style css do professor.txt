@@ -1,0 +1,255 @@
+https://dontpad.com/talitaweb
+
+:root{
+    --brand: #B91F33;
+    --primary: #101417;
+    --contrast: #E0E34C;
+    --gray-light: #E1E1E1;
+    --gray-medium: #666666;
+    --white: #FFFFFF;
+    --black: #000000;
+    --radius: 3px;        
+}
+
+body{
+    font-family: 'Teko', sans-serif;
+    margin: 0; /*retirando a margem padrão do body*/    
+    text-transform: uppercase; /*converte o texto para maiúsculo*/
+    background-color: var(--primary);
+}
+
+img{
+    display: block;
+}
+
+a{
+    text-decoration: none; /*retirando o sublinhado dos links*/
+}
+
+h1, h2, h3, h4, h5, h6{
+    margin: 0;    
+}
+
+p{
+    color: var(--gray-light);
+    line-height: 120%;
+    font-size: 18px;
+}
+
+h2{
+    font-size: 40px;
+    color: var(--white);
+}
+
+.container{
+    width: 1140px;
+    /*centralizar o container*/
+    margin-left: auto;
+    margin-right: auto;    
+}
+
+.header{
+    background-color: var(--black);
+    width: 100%; /*largura*/
+    height: auto; /*altura*/
+
+    /*espaçamento interno*/
+    padding-top: 16px;
+    padding-bottom: 16px;
+
+    position: sticky;
+    top: 0;
+}
+
+/*formatando o container que está dentro do header*/
+.header .container{    
+    /*
+        FLEXBOX: Conjunto de propriedades CSS para organização de Layout
+    */
+    display: flex;
+    align-items: center; /*alinhamento vertical*/
+    justify-content: space-between; /*alinhamento horizontal*/
+}
+
+.menu a{
+    color: var(--white);
+    margin-left: 111px;    
+    font-size: 18px;
+    font-weight: 700;    
+}
+
+/*ao passar o mouse nos links do menu*/
+.menu a:hover{
+    color: var(--brand);    
+}
+
+.hero-section{    
+    background-image: url(../img/background.jpg);    
+    background-size: cover;
+    background-position: center center;
+    /*VH (view height) unidade de medida baseada no navegador*/
+    /*calc() -> função para realizar um cálculo*/
+    height: calc(100vh - 100px);    
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: var(--gray-light);
+}
+
+.hero-section h1{    
+    font-size: 96px;
+    line-height: 90%;    
+}
+
+.hero-section p{
+    font-size: 24px;
+}
+
+.btn{
+    color: var(--white);
+    background-color: var(--brand);
+    font-size: 18px;
+
+    /*padding-top: 13px;
+    padding-right: 60px;
+    padding-bottom: 9px;
+    padding-left: 60px;*/
+    padding: 9px 60px 5px 60px; /*top right bottom left*/
+    border-radius: 3px;
+    display: inline-block;
+    transition: 0.2s;
+    border: 2px solid transparent;
+}
+.btn:hover{
+    transform: scale(0.95);
+}
+
+.btn-outline{
+    background-color: transparent;
+    border: 2px solid var(--brand);
+}
+
+.btn-block{
+    display: block;
+}
+
+.nossa-academia{
+    display: flex;
+    align-items: center;
+    column-gap: 24px; /*espaço entre as colunas do flex*/
+    margin-top: 100px;
+    margin-bottom: 100px;    
+    
+}
+
+.faca-parte{
+    background-color: var(--gray-light);        
+}
+
+.faca-parte .content{
+    width: 850px;
+}
+
+.faca-parte h2{
+    color: var(--primary);
+}
+
+.faca-parte p{
+    color: var(--gray-medium);
+}
+
+.faca-parte .container{
+    position: relative; /*servir de referência para o position:absolute*/
+    padding-top: 37px;
+    padding-bottom: 37px;    
+}
+
+.faca-parte .image{
+    /*Posição em relação ao elemento PAI (desde que ele tenha position), 
+    caso contrário será em relação ao body*/
+    position: absolute;    
+    bottom: 0;
+    right: 0;
+}
+
+.nossos-planos{
+    margin-top: 100px;
+    margin-bottom: 100px;
+    text-align: center;
+}
+
+.flex-cards{
+    display: flex;
+    column-gap: 24px;
+}
+
+.card{
+    /*border-width: 1px;
+    border-color: var(--gray-light);
+    border-style: solid;*/
+    border: solid 1px var(--gray-light);
+    border-radius: var(--radius);
+    padding: 30px;
+    background-color: rgba(0, 0, 0, 0.30);
+}
+
+
+.card-destaque > span{
+    color: var(--contrast) !important;
+}
+
+/* pai > filho{} todos os descendentes diretos do pai*/
+.card h3, .card > span{
+    color: var(--white);
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.card ul{
+    color: var(--gray-light);
+    text-align: left;
+    font-size: 18px;
+    padding: 0;
+    list-style-position: inside;
+}
+
+.card .btn{
+    display: block;
+}
+
+.card-destaque{
+    border-color: var(--contrast);
+    position: relative; /*servir de referência para o position:absolute*/
+}
+
+
+@keyframes rotate {
+    0%{
+        transform: rotate(0deg);
+    }  
+    
+    50%{
+        transform: rotate(45deg);
+    }
+    
+    100%{
+        transform: rotate(0deg);
+    }
+}
+
+.selo{
+    animation: rotate 5s infinite linear;
+    width: 70px;
+    height: 70px;
+    background-color: var(--contrast);
+    border-radius: 50%;
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 90%;
+}
+

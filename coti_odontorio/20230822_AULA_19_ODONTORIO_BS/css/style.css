@@ -1,0 +1,10 @@
+
+.container{
+    max-width: 1140px;
+}
+
+.presentation, .services, .contact{
+    margin-top: 100px;
+}
+
+

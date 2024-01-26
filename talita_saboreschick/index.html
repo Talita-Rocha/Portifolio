@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sabores Chick</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">   
+    <!-- link obtido no https://icons.getbootstrap.com/#install > install > CDN > link -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- para inserir a fonte Teko obtida no google fonts  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Teko:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    
+    <div class="header">
+    
+        <div class="container">
+            <div class="logo">
+                <img src="img/logoo.svg" alt="Logotipo Sabores chick's">
+            </div>
+    
+            <div class="menu">
+                <a href="#">Início</a>
+                <a href="#">Nossos produtos</a>
+                <a href="#">Promoções</a>
+                <a href="#">Fale conosco</a>
+            </div>
+            <!-- o jogo da velha mantém o link na mesma pág. -->
+            <!-- PARA ACESSIBILIDADE: 
+                        AO ESCREVER EM MAIÚSCULO - A PALAVRA SERÁ SOLETRADA.  
+                        AO ESCREVER EM MINÚSCULO - A PALAVRA É FALADA  -->
+        </div>
+    </div>
+
+    <div class="herosection">
+        <div class="container">
+            <div class="contenthero">
+                <h1>Os melhores doces e salgadinhos da cidade estão aqui!</h1>
+    
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit repellat architecto dicta, veniam eius inventore nam esse cupiditate repudiandae nemo at illo beatae aliquam sequi? Cum vel nam praesentium voluptate?</p>
+                
+                <a href="#" class="btn">Saiba mais</a>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- PLANOS -->
+    <section class="container planos" id="planos">
+
+        <h2>Nossos Planos</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec porttitor interdum arcu, ac lacinia lorem
+            pellentesque id. Morbi tincidunt malesuada vestibulum. Praesent at diam eros. Integer tempus vitae urna
+            et rhoncus. Proin congue turpis ac felis tincidunt congue. Duis tincidunt dui eu malesuada convallis.
+        </p>
+
+        <div class="flex-cards">
+
+            <article class="card">
+                <h3>Plano Mensal</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec porttitor interdum arcu, </p>
+                <span>R$ 64,90</span>
+                <ul>
+                    <li>Lorem ipsum dolor Vestibulum ante</li>
+                    <li>sit amet, consecte ante</li>
+                    <li>tur adipiscing elit primis in faucibus</li>
+                    <li>Donec porttitor primis in</li>
+                    <li>interdum arcuultrices posuere </li>
+                </ul>
+                <a href="#" class="btn btn-outline">Lorem Ipsum</a>
+            </article>
+
+            <article class="card destaque">
+                <h3>Plano anual</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec porttitor interdum arcu, </p>
+                <span>R$ 49,90</span>
+                <ul>
+                    <li>Lorem ipsum dolor Vestibulum ante</li>
+                    <li>sit amet, consecte ante</li>
+                    <li>tur adipiscing elit primis in faucibus</li>
+                    <li>Donec porttitor primis in</li>
+                    <li>interdum arcuultrices posuere </li>
+                </ul>
+                <a href="#" class="btn">Lorem Ipsum</a>
+            </article>
+
+            <article class="card">
+                <h3>Plano semestral</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec porttitor interdum arcu, </p>
+                <span>R$ 54,90</span>
+                <ul>
+                    <li>Lorem ipsum dolor Vestibulum ante</li>
+                    <li>sit amet, consecte ante</li>
+                    <li>tur adipiscing elit primis in faucibus</li>
+                    <li>Donec porttitor primis in</li>
+                    <li>interdum arcuultrices posuere </li>
+                </ul>
+                <a href="#" class="btn btn-outline">Lorem Ipsum</a>
+            </article>
+
+        </div>
+
+    </section>
+
+    <!-- CONTATO -->
+    <div class="container contato" id="contato">
+
+        <div class="content-contato">
+            <h2>Fale com a Hard Core</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec porttitor interdum arcu, ac
+                lacinia lorem pellentesque id. Morbi tincidunt malesuada vestibulum. Praesent at diam eros.
+            </p>
+
+            <form action="#"> <!-- no lugar do # seria o https ou local do arquivo -->
+
+                <input type="text" name="nome" placeholder="Digite seu nome" required minlength="3" maxlength="30">
+                <input type="text" name="email" placeholder="Digite seu e-mail" required>
+                <input type="text" name="telefone" placeholder="Digite seu telefone">
+
+                <textarea placeholder="Digite sua mensagem"></textarea>
+                <!-- <textarea name="" id="" cols="30" rows="10"></textarea> -->
+
+                <button class=" btn btn-outline">Lorem Ipsum</button>
+
+            </form>
+
+    </div>
+
+        <div class="maps">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3680.2546712150374!2d-43.55367752574936!3d-22.718773731176647!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x995d5a881eae85%3A0x702c83b76a0f5cda!2sSabores%20Chik&#39;s!5e0!3m2!1spt-BR!2sbr!4v1705159259995!5m2!1spt-BR!2sbr" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>"
+                
+        </div>
+
+    </div>
+
+    <!-- FOOTER -->
+    <div class="container footer">
+    
+        <p>Obrigada pela compra !
+            Faça sua avaliação na nossa página.  É muito importante para mim ! 
+            Para  melhor atender vc e sua família!.</p>
+    </div>
+    
+    <!-- SOCIAL -->
+    <div class="container social">
+        <a href="#"><img src="img/midias/twitter.svg" alt="Ícone do Twitter: com link para o perfil da academia Hard Core"></a>
+        <a href="#"><img src="img/midias/youtube.svg" alt="Ícone do YouTube: com link para o canal da academia Hard Core"></a>
+        <a href="https://www.facebook.com/SaboresChiks/"><img src="img/midias/facebook.svg" alt="Ícone do Facebook: com link para o perfil da academia Hard Core"></a>
+    </div>
+   
+
+</body>
+</html>
+

@@ -1,0 +1,231 @@
+/* root é um seletor mais profundo */
+:root{
+    --brand: #B91F33;
+    --primary: #101417;
+    --contrast:#E0E34C;
+    --white: #FFFFFF;
+    --gray-medium:#666666;
+    --gray-light:#E1E1E1;
+
+    --cor1: #875EEB;
+    --cor2: #E35EEB;
+    --cor3: #B55EEB;
+    --cor4: #070FEB;
+    --cor5: #EB5EA4;
+
+  
+    --border: 3px;
+
+
+/*  */
+
+    }
+
+body{
+    font-family: 'Teko', sans-serif;
+    margin: 0;
+    background-color: var(--cor3);
+    text-transform: uppercase; /*altera o texto para maiúsculo*/
+
+}
+
+h1, h2, h3, h4, h5, h6{
+    margin: 0;
+}
+
+h2{
+    color: var(--cor2);
+    font-size: 40px;
+}
+
+p{
+    color: var(--gray-light);
+    font-size: 18px;   
+    line-height: 120%; 
+}
+
+a{
+    text-decoration: none;
+}
+
+/*todos os containers do site*/
+.container{
+    width: 1140px;
+    margin: 0 auto; /* "zero" para a vertical (top/bottom) e "auto" para a horizontal (left/right)*/
+    /* margin-left: auto; */
+    /* margin-right: auto; */
+}
+
+.header{
+    width: 100%; /* por padrão a largura é definida em 100%*/
+    height: auto; /* por padrão a altura é definida em auto*/
+    padding-top: 16px; /* espaço interno acima */
+    padding-bottom: 16px; /* espaço interno acima */
+    background-color: #666666;
+}
+
+.header .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu a{
+    color: var(--white);
+    font-size: 18px;
+    font-weight: 700; /*mesmo que BOLD (negrito, mas tem variação) ->> se atentar para a descrição da fonteb obtida no google*/
+    margin-left: 110px;
+}
+
+.menu a:hover{
+    color: var(--cor5);
+}
+
+/* herosection - start */
+.herosection{
+    /* height: 550px; */
+    height: calc(100vh - 100px); /* vh = view height - ocupará a tela no total, mas descontará os 100px do menu */
+    background-image: url(../img/background1.jpg); /* ../ é para voltar na pasta anterior*/
+    background-size: cover; /* a img cobrirá toda a área*/
+    background-position: top center;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.herosection h1{
+    color: var(--gray-light);
+    font-size: 48px;
+    line-height: 90%;
+}
+
+.herosection p{
+    font-size: 24px;
+}
+
+.btn{
+background-color: var(--cor1);
+color: var(--white);
+padding: 13px 60px 9px 60px; /*top right bottom left (sentido horário)*/
+/* padding: 13px, 60px, 9px, 60px; deu erro pois está com vírgulas*/
+/* padding-top: 13px;
+padding-right: 60px;
+padding-bottom: 9px;
+padding-left: 60px; */
+font-size: 18px;
+border-radius: var(--border);
+display: inline-block;
+transition: 0.3s; /* define o tempo sobre do efeito do hover. só funciona */
+}
+
+.btn:hover{
+    transform: scale(1.05); /* padrão = 1.0; aumenta o tamanho do botão */
+}
+
+/* herosection - end */
+
+/* PLANOS */
+
+.planos{
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 100px;
+  }
+  
+  .flex-cards{
+     display: flex;
+     column-gap: 24px;
+  }
+ 
+  .card{
+     background-color: black;
+     border: 1px solid var(--gray-light);
+     border-radius: 3px;
+     padding: 30px;  
+  }
+ 
+ .card h3{
+     color: #ffffff;
+     font-size: 32px; 
+ }
+  
+  .card ul{
+     color: #ffffff;
+     font-size: 18px;
+     text-align: left;
+     padding: 0;
+     list-style-position: inside;
+  }
+ 
+  .card span{
+     color: #ffffff;
+     font-size: 32px;
+     font-weight: 700;
+ }
+ 
+ .card .btn{
+     display: block;
+ }
+ 
+ .destaque{
+     border-color: var(--contrast);
+ }
+ 
+ .destaque span{
+     color: var(--contrast);
+ }
+ 
+ /* CONTATO */
+ 
+ .contato{
+     /* background-color: blue;  */
+     display: flex;
+     column-gap: 24px;
+     margin-bottom: 100px;
+ }
+ 
+ .contato input, .contato textarea{
+     width: 100%;
+     height: 40px;
+     background-color: transparent;
+     border: 1px solid var(--gray-light);
+     border-radius: 3px;
+     padding-left: 10px;
+     margin-bottom: 10px;
+     color:#ffffff;
+     font-size: 18px;
+     box-sizing: border-box; 
+     /*este comando faz os ajustes das dimensões automaticamente, faz com que o border e padding não interfiram na soma*/
+ }
+ 
+ .contato textarea{
+     height: 140px;
+     resize: none; /*para remover a opção do usuário ajustar o tamanho do campo */
+     padding: 10px;
+ }
+ 
+ ::placeholder{
+     color: var(--gray-medium);
+ }
+ /* altera a cor de todos placeholder */
+ 
+ /* FOOTER */
+ 
+ .footer{
+     background-color: var(--cor3);
+     padding: 15px 195px;
+     box-sizing: border-box;
+ }
+ 
+ .footer p{
+     margin: 0;
+     text-align: center;    
+ }
+ 
+ .social{
+     display: flex;
+     justify-content: center;
+     column-gap: 10px; 
+     margin-top: 30px;
+     margin-bottom: 100px;
+ }

@@ -1,0 +1,399 @@
+/* root é um seletor mais profundo */
+:root {
+    --brand: #B91F33;
+    --primary: #101417;
+    --contrast: #E0E34C;
+    --white: #FFFFFF;
+    --black: #000000;
+    --gray-medium: #666666;
+    --gray-light: #E1E1E1;
+    --border: 3px;
+}
+
+* {
+    font-family: 'Teko', sans-serif;
+    text-transform: uppercase;
+    /*altera o texto para maiúsculo*/
+}
+
+body {
+    margin: 0;
+    background-color: var(--primary);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
+
+h2 {
+    color: var(--white);
+    font-size: 40px;
+    line-height: 100%; /*altura da linha igual a largura do texto*/
+}
+
+/* h3, span {
+    color: var(--white);
+    font-size: 32px;
+    font-weight: 700;
+} */
+
+p {
+    color: var(--gray-light);
+    font-size: 18px;
+    line-height: 120%;
+}
+
+ul {
+    color: var(--gray-light);
+    font-size: 18px;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    /* as imagens são tratadas como texto, que por padrão tem display em linha e espaço abaixo, ao alterar para block, o espaço some! */
+}
+
+/*todos os containers do site*/
+.container {
+    width: 1140px;
+    margin: 0 auto;
+    /* "zero" para a vertical (top/bottom) e "auto" para a horizontal (left/right)*/
+    /* margin-left: auto; */
+    /* margin-right: auto; */
+}
+
+.header {
+    background-color: var(--black);
+    width: 100%;
+    /* por padrão a largura é definida em 100%*/
+    height: auto;
+    /* por padrão a altura é definida em auto*/
+    padding-top: 16px;
+    /* espaço interno acima */
+    padding-bottom: 16px;
+    /* espaço interno acima */
+    position: sticky;
+    top: 0;
+    z-index: 1000; /*quanto maior o nº, maior é a prioridade da ordem do position*/
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu a {
+    color: var(--white);
+    font-size: 18px;
+    font-weight: 700;
+    /*mesmo que BOLD (negrito, mas tem variação) ->> se atentar para a descrição da fonteb obtida no google*/
+    margin-left: 110px;
+}
+
+.menu a:hover {
+    color: var(--brand);
+}
+
+/* herosection - start */
+.herosection {
+    /* height: 550px; */
+    height: calc(100vh - 100px);
+    /* vh = view height - ocupará a tela no total, mas descontará os 100px do menu */
+    background-image: url(../img/background\ 1.jpg);
+    /* ../ é para voltar na pasta anterior*/
+    background-size: cover;
+    /* a img cobrirá toda a área*/
+    background-position: top center;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.herosection h1 {
+    color: var(--gray-light);
+    font-size: 96px;
+    line-height: 90%;
+}
+
+.herosection p {
+    font-size: 24px;
+}
+
+.btn {
+    color: var(--white);
+    background-color: var(--brand);
+    font-size: 18px;
+
+    /* padding: 13px, 60px, 9px, 60px; deu erro pois está com vírgulas*/
+    /* padding-top: 13px;
+    padding-right: 60px;
+    padding-bottom: 9px;
+    padding-left: 60px; */
+
+    padding: 9px 60px 5px 60px;
+    /*top right bottom left (sentido horário)*/
+    border-radius: var(--border);
+    display: inline-block;
+    transition: 0.2s;
+    border: 2px solid transparent;
+    /* define o tempo sobre do efeito do hover. só funciona */
+    cursor: pointer;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    /* padrão = 1.0; aumenta o tamanho do botão */
+}
+
+.btn-outline {
+    background-color: transparent;
+    border: 2px var(--brand) solid;
+}
+
+.btn-block {
+    display: block;
+}
+
+/* herosection - end */
+
+/* nossaAcademia - start */
+
+.nossaAcademia {
+    display: flex;
+    align-items: center;
+    column-gap: 24px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+/* nossaAcademia - end */
+
+/* faça parte - start */
+.facaparte {
+    background-color: var(--gray-light);
+}
+
+.facaparte .content {
+    width: 850px;
+}
+
+.facaparte h2 {
+    color: var(--primary);
+}
+
+.facaparte p {
+    color: var(--gray-medium);
+}
+
+.facaparte .container {
+    position: relative;
+    /*servir de referência para o position:absolute*/
+    padding-top: 37px;
+    padding-bottom: 37px;
+}
+
+.facaparte .image {
+    /*Posição em relação ao elemento PAI (desde que ele tenha position), 
+    caso contrário será em relação ao body*/
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+/* faça parte - end */
+
+/* nossos planos - start */
+.nossos-planos {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    text-align: center;
+}
+
+.flex-cards {
+    display: flex;
+    column-gap: 24px;
+
+}
+
+.card {
+    border: 1px var(--gray-light) solid;
+    /*a ordem não importa!*/
+    /* border-width: 1px;
+    border-color: var(--gray-light);
+    border-style: solid; */
+    border-radius: var(--border);
+    padding: 30px;
+    background: rgba(0, 0, 0, 0.30);
+}
+
+.card-destaque>span {
+    color: var(--contrast) !important;
+    /* para forçar a formatação*/
+}
+
+/* seletorpai > seletor filho {} todos os descendentes diretos do pai */
+.card h3,
+.card>span {
+    color: var(--white);
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.card ul {
+    color: var(--gray-light);
+    text-align: left;
+    font-size: 18px;
+    padding: 0;
+    list-style-position: inside;
+}
+
+.card .btn {
+    display: block;
+}
+
+.card-destaque {
+    border-color: var(--contrast);
+    position: relative;
+    /* serve de referencia para o position: absolute do selo*/
+}
+
+@keyframes rotate {
+
+    /* 0%{
+        background-color: var(--contrast);
+    }
+
+    50%{
+        background-color: var(--brand);
+    }
+
+    100%{
+        background-color: var(--contrast);
+    } */
+
+    0% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(45deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+
+.selo {
+    animation: rotate 5s infinite linear;
+    width: 70px;
+    height: 70px;
+    background-color: var(--contrast);
+    border-radius: 50%;
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 90%;
+}
+
+/* @keyframes fade {
+    background-color: 
+} */
+/*
+
+/* nossos planos - end */
+
+/* fale-conosco -start*/
+.fale-conosco {
+    display: flex;
+    column-gap: 24px;
+}
+
+.contato input,
+.contato textarea {
+    display: block;
+    width: 100%;
+    height: 40px;
+    background-color: transparent;
+    border: 1px solid var(--gray-light);
+    border-radius: var(--border);
+    padding-left: 10px;
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: var(--gray-light);
+    box-sizing: border-box;
+    /* mantém as dimensões (widht/height) da div, mesmo com o padding e o border, sem precisar usar a função calc() */
+}
+
+.contato textarea {
+    height: 140px;
+    padding-top: 10px;
+}
+
+.contato button{
+    padding-top: 10px;
+}
+/* fale-conosco -end*/
+
+/* footer - start*/
+.footer {
+    background-color: var(--brand);
+    margin-top: 100px;
+    margin-bottom: 30px;
+    height: 70px;   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.footer .content p{
+    /* background-color: #E0E34C; */
+    color: var(--white);
+    width: 750px;
+    height: 40px;
+    text-align: center;
+    margin: 0; 
+}
+
+/* .facaparte .content {
+    width: 850px;
+} */
+
+/* footer - end*/
+
+/* midias - start*/
+.midias{
+    display: flex;
+    justify-content: center;
+    column-gap: 10px;
+    margin-bottom: 100px;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+.midias .twitter:hover{
+    transform: scale(1.05);
+}
+
+.midias .youtube:hover{
+    transform: scale(1.05);
+}
+
+.midias .facebook:hover {
+    transform: scale(1.05);
+}
+/* midias - end*/
